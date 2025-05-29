@@ -1,0 +1,135 @@
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0;}
+input[type=number] {-moz-appearance: textfield;}
+* { margin: 0; padding: 0; box-sizing: border-box;}
+html {font-family: Arial, Helvetica, sans-serif; overflow-y: scroll; max-width: 2000px; margin: 0 auto;}
+.container { margin: 1rem 1.5rem; font-size: 1.2rem; color: #192a56;}
+
+.minh-home { min-height: calc(100vh - 14.36rem);}
+.minh-100vh { min-height: 100vh;}
+.layout > div:first-child {flex: 1;}
+.mb-2remForProducts {margin-bottom: 2rem;}
+
+.d-none {display: none;}
+.d-inline {display: inline;}
+.d-inlineBlock {display: inline-block;}
+.d-block {display: block;}
+
+.d-flex { display: flex;}
+.flex-Direc-row {flex-direction: row;}
+
+.flex-wrap {flex-wrap: wrap;}
+.flex-col {flex-direction: column;}
+
+.ac-space {align-content: space-between;}
+.ai-center {align-items: center;}
+.jc-center {justify-content: center;}
+.jc-space {justify-content: space-between;}
+
+.d-grid {display: grid;}
+.gridTC {grid-template-columns: repeat(1 , 1fr);}
+@media (min-width: 1100px) {.gridTC {grid-template-columns: repeat(2 , 1fr);}}
+@media (min-width: 1600px) {.gridTC {grid-template-columns: repeat(3 , 1fr);}}
+@media (min-width: 650px) {.d-flex-after550 {display: flex ;}}
+
+.gap-1-15 { gap: 1rem 10rem;}
+.gap-5px {gap: 0.3rem;}
+.gap-05 {gap: 0.5rem;}
+.gap-1 {gap: 1rem;}
+.gap-2 {gap: 2rem;}
+.gap-3 {gap: 3rem;}
+
+.mlr-105 {margin: 0 1.5rem;}
+.mt-1 {margin-top: 1rem;}
+.mt-2 {margin-top: 2rem;}
+.mt-3 {margin-top: 3rem;}
+.mb-minus3 {margin-bottom: -3rem;}
+.mb-05 {margin-bottom: 0.5rem;}
+.mb-1 {margin-bottom: 1rem;}
+.mb-2 {margin-bottom: 2rem;}
+.ml-05 {margin-left: 0.5rem;}
+.ml-1 {margin-left: 1rem;}
+.ml-2 {margin-left: 2rem;}
+.mr-1 {margin-right: 1rem;}
+.mr-05 {margin-right: 0.5rem;}
+
+
+.p-05-0 {padding: 0.5rem 0;}
+.p-05-1 {padding: 0.5rem 1rem;}
+.p-05 {padding: 0.5rem;}
+.p-1 {padding: 1rem;}
+.p-2 {padding: 2rem;}
+.p-0-3 {padding: 0 3rem;}
+
+
+.w-hSpinner {width: 8rem !important; height: 8rem !important;}
+.w-35px {width: 2.2rem;}
+.w-10 {width: 10rem}
+.w-100p {width: 100%;}
+.w-25p {width: 25%;}
+.minH-10 {min-height: 10rem;}
+.w-20p {width: 20%;}
+.w-80p {width: 80%;}
+
+
+.minH-30 {min-height: 28rem;}
+
+.h-3px {height: 0.2rem;}
+.h-20 {min-height: 18rem;}
+@media (min-width: 650px) {.h-20 {min-height: 30rem;}}
+@media (min-width: 1100px) {.h-20 {min-height: 20rem;}}
+@media (min-width: 650px) {.d-flex-after550 {display: flex ;}}
+
+.border {border: 2px solid #192a56;}
+.borderR-03 {border-radius: 0.3rem;}
+.borderR-05 {border-radius: 0.5rem;}
+.borderR-1 {border-radius: 1rem;}
+.border-none {border: none;}
+
+.bgS-contain {background-size: contain;}
+.bgS-cover {background-size: cover;}
+.bgR-none {background-repeat: no-repeat;}
+.bgP-center {background-position: center;}
+
+.bgAttach-fixed {background-attachment: fixed;}
+
+.overflow-hidden {overflow: hidden;}
+
+.resize-none {resize: none;}
+.outline-none {outline: none;}
+
+.bg-black {background-color: #2f3640;}
+.bg-gray {background-color: #d1d8e0;}
+.bg-red {background-color: #EA2027;}
+.bg-white {background-color: #ecf0f1;}
+
+.fc-red { color: #EA2027;}
+.fc-black { color: #2f3640;}
+.fc-white { color: #ecf0f1;}
+.fc-Lblue { color: #3742fa;}
+
+.fw-bold {font-weight: bold;}
+.ff-inherit {font-family: inherit;}
+
+.fs-sm {font-size: 0.8rem;}
+.fs-n {font-size: 1rem;}
+.fs-md {font-size: 1.2rem;}
+.fs-lg {font-size: 1.5rem;}
+.fs-xl {font-size: 1.8rem;}
+.fs-2xl {font-size: 2.5rem;}
+.fs-3xl {font-size: 3rem;}
+
+.ta-justify {text-align: justify;}
+.ta-center {text-align: center;}
+.lineH-108 {line-height: 1.8;}
+.textDeco-none {text-decoration: none;}
+
+.hover:hover {opacity: 0.8;}
+.underLine:hover {text-decoration: underline;}
+
+.boxShadow {box-shadow: 0 .1875rem .4375rem 0 rgba(0, 0, 0, .13), 0 .0625rem .125rem 0 rgba(0, 0, 0, .11);}
+.linGradient {background:  linear-gradient(160deg, rgb(13, 68, 150), rgba(129, 191, 233, 0.842) 60% ); ;}
+
+.position-ab {position: absolute;}
+.position-sticky-top0 {position: sticky; top: 0;}
+.zIndex-999 {z-index: 999;}
