@@ -25,6 +25,7 @@ html {font-family: Arial, Helvetica, sans-serif; overflow-y: scroll; max-width: 
 .ai-center {align-items: center;}
 .jc-center {justify-content: center;}
 .jc-space {justify-content: space-between;}
+.va-center {vertical-align: middle;}
 
 .d-grid {display: grid;}
 .gridTC {grid-template-columns: repeat(1 , 1fr);}
@@ -59,21 +60,24 @@ html {font-family: Arial, Helvetica, sans-serif; overflow-y: scroll; max-width: 
 .p-05 {padding: 0.5rem;}
 .p-1 {padding: 1rem;}
 .p-2 {padding: 2rem;}
-.p-0-3 {padding: 0 3rem;}
+.pl-3 {padding-left: 3rem;}
+.pt-5 {padding-top: 3rem;}
 
-
+.w-h-Shop {width: 1.5rem; height: 1.5rem;}
 .w-hSpinner {width: 8rem !important; height: 8rem !important;}
 .w-35px {width: 2.2rem;}
 .w-10 {width: 10rem}
 .w-100p {width: 100%;}
 .w-25p {width: 25%;}
 .minH-10 {min-height: 10rem;}
-.w-20p {width: 20%;}
-.w-80p {width: 80%;}
 
+.w-20p {width: 30%;} .w-80p {width: 70%;}
+@media (min-width: 1100px) {.w-20p {width: 20%;} .w-80p {width: 80%;}}
+@media (min-width: 1500px) {.w-20p {width: 15%;} .w-80p {width: 85%;}}
+
+.trans-Scale2 {transform: scale(1.5);}
 
 .minH-30 {min-height: 28rem;}
-
 .h-3px {height: 0.2rem;}
 .h-20 {min-height: 18rem;}
 @media (min-width: 650px) {.h-20 {min-height: 30rem;}}
@@ -90,6 +94,7 @@ html {font-family: Arial, Helvetica, sans-serif; overflow-y: scroll; max-width: 
 .bgS-cover {background-size: cover;}
 .bgR-none {background-repeat: no-repeat;}
 .bgP-center {background-position: center;}
+.chBoxbg-color { accent-color: #d1d8e0; }
 
 .bgAttach-fixed {background-attachment: fixed;}
 
@@ -131,5 +136,6 @@ html {font-family: Arial, Helvetica, sans-serif; overflow-y: scroll; max-width: 
 .linGradient {background:  linear-gradient(160deg, rgb(13, 68, 150), rgba(129, 191, 233, 0.842) 60% ); ;}
 
 .position-ab {position: absolute;}
+.position-fix {position: fixed;}
 .position-sticky-top0 {position: sticky; top: 0;}
 .zIndex-999 {z-index: 999;}
