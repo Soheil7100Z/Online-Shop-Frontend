@@ -1,4 +1,4 @@
-
+import { NavLink } from "react-router-dom"
 
 function Products({product}) {
     // console.log(product.id)
@@ -12,7 +12,7 @@ function Products({product}) {
 
         </div>
         <p className="fw-bold"> Preis: {product.price} € </p>
-        <button className="mt-3 bg-black fc-white fs-md hover p-05-1 border-none borderR-03">Button</button>
+        <NavLink to={`/products/${product.id}`}><button className="mt-3 bg-black fc-white fs-md fw-bold hover p-05-1 border-none borderR-03">Kaufen</button></NavLink>
     </div>
   )
 }

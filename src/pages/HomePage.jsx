@@ -3,6 +3,7 @@ import Products from "../component/Products"
 import { useState } from "react"
 
 function HomePage() {
+
   const list = useLoaderData()
   let valueLabtop; let valueTablet; let valueKamera; let valuePhone; let valueMonitor;
   const [labtop , settingLabtop] = useState(false)
@@ -16,7 +17,6 @@ function HomePage() {
   phone ? valuePhone = 3 : ''
   const [monitor , settingMonitor] = useState(false)
   monitor ? valueMonitor = 4 : ''
-
 
   return (
 

@@ -88,6 +88,7 @@ html {font-family: Arial, Helvetica, sans-serif; overflow-y: scroll; max-width: 
 .borderR-03 {border-radius: 0.3rem;}
 .borderR-05 {border-radius: 0.5rem;}
 .borderR-1 {border-radius: 1rem;}
+.borderR-50p {border-radius: 50%;}
 .border-none {border: none;}
 
 .bgS-contain {background-size: contain;}
