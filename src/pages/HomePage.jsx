@@ -72,6 +72,12 @@ function HomePage() {
 }
     const dataloading = async () => {
       const res = await fetch('/api/products')
+        if(!res.ok) {
+            throw new Response ('Error', {
+              status: res.status,
+              statusText: res.statusText,
+            })
+        }
       const data = res.json()
       return data
     }
