@@ -1,13 +1,13 @@
 import Item from "../component/Item"
 import { useLoaderData } from "react-router-dom"
 
-function ItemPage() {
+function ItemPage({settingCollector}) {
 
   const item = useLoaderData()
 
   return (
     <div>
-      <Item item = {item}/>
+      <Item item = {item} settingCollector = {settingCollector} />
     </div>
   )
 }
