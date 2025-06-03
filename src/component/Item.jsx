@@ -1,5 +1,7 @@
+import { useParams } from "react-router-dom"
 
-function Item({item , settingCollector}) {
+function Item({item , settingCollector , getItemIDs}) {
+  const {id} = useParams()
 
   const addingItem = () => {
     settingCollector((precCollector) => (precCollector + 1))
@@ -17,7 +19,7 @@ function Item({item , settingCollector}) {
           <p>{item.description}</p>
           <p className="mt-2 fs-lg fw-bold">Preis: {item.price} € </p>
         </div>
-        <div> <button className="mt-1 bg-black fc-white fs-md fw-bold hover p-05-1 border-none borderR-03" onClick={addingItem}>In den Warenkorb</button></div>
+        <div> <button className="mt-1 bg-black fc-white fs-md fw-bold hover p-05-1 border-none borderR-03" onClick={() => (addingItem() , getItemIDs(id) ) }>In den Warenkorb</button></div>
       </div>
     </div>
     //  </div>

@@ -1,13 +1,13 @@
 import Item from "../component/Item"
 import { useLoaderData } from "react-router-dom"
 
-function ItemPage({settingCollector}) {
+function ItemPage({settingCollector , getItemIDs}) {
 
   const item = useLoaderData()
 
   return (
     <div>
-      <Item item = {item} settingCollector = {settingCollector} />
+      <Item item = {item} settingCollector = {settingCollector} getItemIDs = {getItemIDs} />
     </div>
   )
 }
@@ -15,9 +15,10 @@ function ItemPage({settingCollector}) {
   const itemLaoder = async ({params}) => {
       const res = await fetch(`/api/products/${params.id}`)
         if(!res.ok) {
-            throw new Response ('Error', {
+            const error = await res.json()
+            throw new Response (JSON.stringify(error), {
               status: res.status,
-              statusText: res.statusText,
+              statusText: error.message,
             })
         }
       const data = await res.json()
