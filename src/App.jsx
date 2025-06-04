@@ -8,10 +8,11 @@ import {
 import './App.css'
 import { useState } from 'react'
 import MainLayout from './layout/MainLayout'
-import HomePage , {dataloading} from './pages/HomePage'
-import ItemPage , {itemLaoder} from './pages/ItemPage'
 import ErrorPage from './pages/ErrorPage'
 import NotFoundPage from './pages/NotFoundPage'
+import HomePage , {dataloading} from './pages/HomePage'
+import ItemPage , {itemLaoder} from './pages/ItemPage'
+import CartPage from './pages/CartPage'
 
 function App() {
 
@@ -51,6 +52,7 @@ function App() {
            <Route path='/' element= {<MainLayout itemsCollector = {itemsCollector} />}>
                 <Route index element= {<HomePage/>} errorElement = {<ErrorPage/>} loader={dataloading}/>
                 <Route path='/products/:id' element= {<ItemPage settingCollector = {settingCollector} getItemIDs = {getItemIDs}/>} errorElement={<ErrorPage/>} loader={itemLaoder}/>
+                <Route path='/cart' element= {<CartPage/>} />
                 <Route path='*' element= {<NotFoundPage/>} />
            </Route>
         )
