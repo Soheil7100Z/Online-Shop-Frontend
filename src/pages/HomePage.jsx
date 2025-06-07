@@ -23,20 +23,20 @@ function HomePage() {
   <div className="d-flex">
       <div className=" d-flex jc-center w-20p bg-black fc-white fs-lg pt-5">
         <div className="position-fix">
-          <input type="checkbox" name="Labtop" value={labtop} onChange={() => settingLabtop((prestate) => (!prestate))}
-          className="mr-1 trans-Scale2 chBoxbg-color mb-1"/>
+          <input type="checkbox" value={labtop} onChange={() => settingLabtop((prestate) => (!prestate))}
+          className="mr-1 trans-Scale2 chBoxbg-color mb-1" id="Labtop"/>
           <label htmlFor="Labtop" className="va-center mb-1">Labtop</label> <br />
-           <input type="checkbox" name="Tablet" value={tablet} onChange={() => settingTablet((prestate) => (!prestate))}
-          className="mr-1 trans-Scale2 chBoxbg-color mb-1"/>
+           <input type="checkbox" value={tablet} onChange={() => settingTablet((prestate) => (!prestate))}
+          className="mr-1 trans-Scale2 chBoxbg-color mb-1" id="Tablet"/>
           <label htmlFor="Tablet" className="va-center mb-1">Tablet</label> <br />
-          <input type="checkbox" name="Kamera" value={kamera} onChange={() => settingKamera((prestate) => (!prestate))}
-          className="mr-1 trans-Scale2 chBoxbg-color mb-1"/>
+          <input type="checkbox" value={kamera} onChange={() => settingKamera((prestate) => (!prestate))}
+          className="mr-1 trans-Scale2 chBoxbg-color mb-1" id="Kamera"/>
           <label htmlFor="Kamera" className="va-center mb-1">Kamera</label> <br />
-          <input type="checkbox" name="Smartphone" value={phone} onChange={() => settingPhone((prestate) => (!prestate))}
-          className="mr-1 trans-Scale2 chBoxbg-color mb-1"/>
+          <input type="checkbox" value={phone} onChange={() => settingPhone((prestate) => (!prestate))}
+          className="mr-1 trans-Scale2 chBoxbg-color mb-1" id="Smartphone"/>
           <label htmlFor="Smartphone" className="va-center mb-1">Smart phone</label> <br />
-          <input type="checkbox" name="Monitor" value={monitor} onChange={() => settingMonitor((prestate) => (!prestate))}
-          className="mr-1 trans-Scale2 chBoxbg-color mb-1"/>
+          <input type="checkbox" value={monitor} onChange={() => settingMonitor((prestate) => (!prestate))}
+          className="mr-1 trans-Scale2 chBoxbg-color mb-1" id="Monitor"/>
           <label htmlFor="Monitor" className="va-center">Monitor</label>
         </div>
       </div>

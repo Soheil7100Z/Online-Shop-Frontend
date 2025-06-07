@@ -1,4 +1,6 @@
 import { useParams } from "react-router-dom"
+import { NavLink } from "react-router-dom"
+
 
 function Item({item , settingCollector , getItemIDs}) {
   const {id} = useParams()
@@ -8,21 +10,23 @@ function Item({item , settingCollector , getItemIDs}) {
   }
 
   return (
-    // <div className="d-flex jc-center ">
-      <div className=" container h-item d-flex ai-center jc-center borderR-05 ">
-      <img className=" h-75p bg-gray p-3 borderR-1 boxShadow" src={`${item.image}`} alt="" />
-      {/* <div className="w-60p h-25 bgS-contain bgR-none bgP-center " style={{backgroundImage: `url(${item.image})`}}></div> */}
-      <div className="minH-2 minH-30 d-flex flex-col jc-space ml-10">
-        <p className="fs-3xl fw-bold ">{item.brand}</p>
-        <div className="">
-          <p className="fs-lg mb-05 fw-bold">{item.name}</p>
-          <p>{item.description}</p>
-          <p className="mt-2 fs-lg fw-bold">Preis: {item.price} € </p>
+    <div>
+      <div className="container h-item d-flex cole-cartItem ai-center jc-center borderR-05 pt-2-789">
+      <img className=" h-75p bg-gray p-1 borderR-1 boxShadow p-0 h-min-img " src={`${item.image}`} alt="" />
+      <div className="minH-20 d-flex flex-col jc-space ml-10">
+        <p className="fs-2xl fw-bold d-none-item ">{item.brand}</p>
+        <div>
+          <p className="fs-md mb-05 fw-bold">{item.name}</p>
+          <p className="fs-n d-none-item">{item.description}</p>
+          <p className="mt-2 fs-md fw-bold fs-item-n m-0">Preis: {item.price} € </p>
         </div>
-        <div> <button className="mt-1 bg-black fc-white fs-md fw-bold hover p-05-1 border-none borderR-03" onClick={() => (addingItem() , getItemIDs(id) ) }>In den Warenkorb</button></div>
-      </div>
+        <div><NavLink className="textDeco-none bg-red fc-white fs-md fw-bold hover p-05-1 border-none borderR-03 wordWrap-none fs-item-n p-item" onClick={() => (addingItem() , getItemIDs(id) ) }>In den Warenkorb</NavLink></div>
+        <div><NavLink to='/' className='textDeco-none bg-black fc-white fs-md fw-bold hover p-05-1 border-none borderR-03 fs-item-n p-item'>Zum Produkten</NavLink></div>
+        <div><NavLink to='/cart' className='textDeco-none bg-black fc-white fs-md fw-bold hover p-05-1 border-none borderR-03 fs-item-n p-item'>Zum Warenkorb</NavLink></div>
+
+        </div>
     </div>
-    //  </div>
+    </div>
   )
 }
 

@@ -27,6 +27,7 @@ function App() {
     })
   }
   const cartSaving = async (updatedCartIDs) => {
+    console.log(updatedCartIDs)
     try {
       const res = await fetch('/api/cart' , {
         method: 'POST',
@@ -41,9 +42,9 @@ function App() {
         })
       }
       const data = await res.json()
-      console.log('cart saved:' , data)
+      // console.log('cart saved:' , data)
     } catch (error) {
-      console.log(error)
+      // console.log(error)
     }
   }
 
@@ -52,7 +53,7 @@ function App() {
            <Route path='/' element= {<MainLayout itemsCollector = {itemsCollector} />}>
                 <Route index element= {<HomePage/>} errorElement = {<ErrorPage/>} loader={dataloading}/>
                 <Route path='/products/:id' element= {<ItemPage settingCollector = {settingCollector} getItemIDs = {getItemIDs}/>} errorElement={<ErrorPage/>} loader={itemLaoder}/>
-                <Route path='/cart' element= {<CartPage/>} />
+                <Route path='/cart' element= {<CartPage settingIDsCollector = {settingIDsCollector} settingCollector = {settingCollector} />} />
                 <Route path='*' element= {<NotFoundPage/>} />
            </Route>
         )

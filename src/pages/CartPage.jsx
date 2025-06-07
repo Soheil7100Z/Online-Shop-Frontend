@@ -1,9 +1,9 @@
 import Cart from "../component/cart"
 
-function CartPage() {
+function CartPage({settingIDsCollector , settingCollector}) {
   return (
     <div>
-      <Cart/>
+      <Cart settingIDsCollector = {settingIDsCollector} settingCollector = {settingCollector} />
     </div>
   )
 }
