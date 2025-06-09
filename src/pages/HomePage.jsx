@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom"
 import Products from "../component/Products"
 import { useState } from "react"
+import { GoMultiSelect } from "react-icons/go"
 
 function HomePage() {
 
@@ -18,11 +19,13 @@ function HomePage() {
   const [monitor , settingMonitor] = useState(false)
   monitor ? valueMonitor = 4 : ''
 
+  const [filter , settingfilter] = useState(true)
   return (
 
   <div className="d-flex">
-      <div className=" d-flex jc-center w-20p bg-black fc-white fs-lg pt-5">
-        <div className="position-fix">
+      <div className=" d-flex jc-center w-20p bg-black fc-white fs-lg pt-5  ">
+        <GoMultiSelect className="filterIcon" onClick={() => settingfilter(prestate => !prestate)}/>
+        <div className={`position-fix sidebar ${filter ? 'menuClosed' : 'menuOpen'}`}>
           <input type="checkbox" value={labtop} onChange={() => settingLabtop((prestate) => (!prestate))}
           className="mr-1 trans-Scale2 chBoxbg-color mb-1" id="Labtop"/>
           <label htmlFor="Labtop" className="va-center mb-1">Labtop</label> <br />
@@ -38,21 +41,22 @@ function HomePage() {
           <input type="checkbox" value={monitor} onChange={() => settingMonitor((prestate) => (!prestate))}
           className="mr-1 trans-Scale2 chBoxbg-color mb-1" id="Monitor"/>
           <label htmlFor="Monitor" className="va-center">Monitor</label>
+          <div><button className="mt-1 border-none p-05-1 borderR-03 fs-n fw-bold d-none-790 " onClick={() => settingfilter(prestate => !prestate)} >Filter anwenden</button></div>
         </div>
       </div>
-      { !labtop && !tablet && !kamera && !phone && !monitor
+
+          {!labtop && !tablet && !kamera && !phone && !monitor
 
           ?
-          <div className="container w-80p d-grid gridTC gap-2 ">
-        {list.map((category , id) =>(
-         category.products.map((product , id) =>(
-          <Products key = {id} product = {product} />
-
+          <div className="container w-80p d-grid gridTC gap-2">
+            {list.map((category , id) =>(
+             category.products.map((product , id) =>(
+              <Products key = {id} product = {product} />
              ))
            ))}
-             </div>
+          </div>
 
-           :
+          :
           <div className="container w-80p d-grid gridTC gap-2 ">
             {list.map((category , ID) =>{
               return category.products.map((product , id) =>{
@@ -60,11 +64,10 @@ function HomePage() {
                 // console.log("ok")
                  return <Products key = {id} product = {product} />
               }
+             })
+            })}
+          </div>
              }
-        )
-        })}
-      </div>
-         }
 
   </div>
 

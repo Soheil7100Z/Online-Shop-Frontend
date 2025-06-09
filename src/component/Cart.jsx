@@ -84,7 +84,7 @@ function Cart({settingIDsCollector , settingCollector}) {
 
     {cartDeleted
     ?
-    <div className="h-vp d-flex flex-col jc-center ai-center">
+    <div className="h-vp d-flex flex-col jc-center ai-center min-h-vp">
       <BsFillCartXFill className="fc-red fs-5xl mb-1"/>
       <p className="fs-md ta-center">Ihr Warenkorb wurde erfolgreich entfernt</p>
       <NavLink to='/' className='textDeco-none mt-1 fs-md fc-Lblue underLine fw-bold'>Weiter einkaufen</NavLink>
