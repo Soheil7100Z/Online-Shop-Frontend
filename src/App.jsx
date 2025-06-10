@@ -27,9 +27,9 @@ function App() {
     })
   }
   const cartSaving = async (updatedCartIDs) => {
-    console.log(updatedCartIDs)
+    // console.log(updatedCartIDs)
     try {
-      const res = await fetch('/api/cart' , {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/cart` , {
         method: 'POST',
         headers: {'Content-Type' : 'application/json'},
         body: JSON.stringify(updatedCartIDs)

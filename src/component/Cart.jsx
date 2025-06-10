@@ -18,7 +18,7 @@ function Cart({settingIDsCollector , settingCollector}) {
   } = useQuery({
     queryKey: ['cartList'],
     queryFn: async () => {
-      const res = await fetch('/api/updatedCart')
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/updatedCart`)
       if (!res.ok) {
         const errorCatching = await res.json()
         throw new Response (JSON.stringify(errorCatching), {
@@ -36,7 +36,7 @@ function Cart({settingIDsCollector , settingCollector}) {
   })
 
   const deletingCart = async () => {
-    const res = await fetch('/api/deleteCart' , {
+    const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/deleteCart` , {
       method: 'DELETE',
       headers: {'Content-Type':'application/json'}
     })

@@ -74,7 +74,7 @@ function HomePage() {
   )
 }
     const dataloading = async () => {
-      const res = await fetch('/api/products')
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/products`)
         if(!res.ok) {
             const error = await res.json()
             throw new Response (JSON.stringify(error), {

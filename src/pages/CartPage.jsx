@@ -1,4 +1,4 @@
-import Cart from "../component/cart"
+import Cart from "../component/Cart"
 
 function CartPage({settingIDsCollector , settingCollector}) {
   return (

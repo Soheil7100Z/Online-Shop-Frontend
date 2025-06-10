@@ -13,7 +13,7 @@ function ItemPage({settingCollector , getItemIDs}) {
 }
 
   const itemLaoder = async ({params}) => {
-      const res = await fetch(`/api/products/${params.id}`)
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/products/${params.id}`)
         if(!res.ok) {
             const error = await res.json()
             throw new Response (JSON.stringify(error), {
