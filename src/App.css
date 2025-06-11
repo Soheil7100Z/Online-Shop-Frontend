@@ -31,9 +31,8 @@ html {font-family: Arial, Helvetica, sans-serif; overflow-y: scroll; max-width: 
 
 .d-grid {display: grid;}
 .gridTC {grid-template-columns: repeat(1 , 1fr);}
-@media (min-width: 768px) {.gridTC {grid-template-columns: repeat(2 , 1fr);}}
-@media (min-width: 1100px) {.gridTC {grid-template-columns: repeat(3 , 1fr);}}
-@media (min-width: 1750px) {.gridTC {grid-template-columns: repeat(4 , 1fr);}}
+@media (min-width: 1100px) {.gridTC {grid-template-columns: repeat(2 , 1fr);}}
+@media (min-width: 1750px) {.gridTC {grid-template-columns: repeat(3 , 1fr);}}
 @media (min-width: 650px) {.d-flex-after550 {display: flex ;}}
 
 .gap-1-15 { gap: 1rem 10rem;}
@@ -157,11 +156,11 @@ html {font-family: Arial, Helvetica, sans-serif; overflow-y: scroll; max-width: 
 .position-sticky-top0 {position: sticky; top: 0;}
 .zIndex-999 {z-index: 999;}
 
-@media(max-width: 789px) {
+@media(max-width: 989px) {
   .cole-cartItem {display: block; text-align: center;}
-  .h-item { height: calc(100vh - 8.85rem);}
-  .h-Cart { min-height: calc(100vh - 13.6rem);}
-  .h-vp { height: calc(100vh - 6.85rem);}
+  .h-item { height: calc(100vh - 9.36rem);}
+  .h-Cart { min-height: calc(100vh - 14.1rem);}
+  .h-vp { height: calc(100vh - 7.35rem);}
   .h-75p {height: 25%;}
   .h-min-img {min-height: 10rem;}
   .ml-10 { margin: 1rem 0 0 0;}
@@ -172,7 +171,7 @@ html {font-family: Arial, Helvetica, sans-serif; overflow-y: scroll; max-width: 
   .m-0 {margin: 0;}
   .p-1-Nav {padding: 1;}
   .p-item {padding: 0.3rem 0.5rem;}
-  .fs-md-789 {font-size: 1.5rem;}
+  .fs-md-789 {font-size: 2rem;}
   .pt-2-789 {padding-top: 2rem;}
   /* sidebar filter*/
   .w-80p {width: 100%;}
