@@ -41,7 +41,7 @@ function HomePage() {
           <input type="checkbox" value={monitor} onChange={() => settingMonitor((prestate) => (!prestate))}
           className="mr-1 trans-Scale2 chBoxbg-color mb-1" id="Monitor"/>
           <label htmlFor="Monitor" className="va-center">Monitor</label>
-          <div><button className="mt-1 border-none p-05-1 borderR-03 fs-n fw-bold d-none-790 " onClick={() => settingfilter(prestate => !prestate)} >Filter anwenden</button></div>
+          <div><button className="mt-1 border-none p-05-1 borderR-03 fs-n fw-bold d-none-989 " onClick={() => settingfilter(prestate => !prestate)} >Filter anwenden</button></div>
         </div>
       </div>
 

@@ -200,9 +200,9 @@ html {font-family: Arial, Helvetica, sans-serif; overflow-y: scroll; max-width: 
   .menuClosed { z-index: -1; transform: translateX(-70%); opacity: 0;}
   .menuOpen { z-index: 200; transform: translateX(0%); opacity: 1; transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;}
 }
-@media(min-width: 790px) {
+@media(min-width: 989.99px) {
   .filterIcon {display: none;}
-  .d-none-790 {display: none;}
+  .d-none-989 {display: none;}
 }
 @media(max-height: 560px) {
   .minH-20 {min-height: 8.5rem;}
