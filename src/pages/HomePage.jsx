@@ -1,11 +1,15 @@
 import { useLoaderData } from "react-router-dom"
 import Products from "../component/Products"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { GoMultiSelect } from "react-icons/go"
+import { ClipLoader } from "react-spinners"
 
 function HomePage() {
-
+  const [loading , settingLaoder] = useState(true)
   const list = useLoaderData()
+  useEffect(()=>{
+    if (list) {settingLaoder(false)}
+  },[list])
   let valueLabtop; let valueTablet; let valueKamera; let valuePhone; let valueMonitor;
   const [labtop , settingLabtop] = useState(false)
   labtop ? valueLabtop = 0 : ''
@@ -22,6 +26,12 @@ function HomePage() {
   const [filter , settingfilter] = useState(true)
   return (
 
+<>
+     {loading
+      ? <div className='h-vp d-flex jc-center ai-center'>
+          <ClipLoader className='w-hSpinner'/>
+        </div>
+      : ''}
   <div className="d-flex">
       <div className=" d-flex jc-center w-20p bg-black fc-white fs-lg pt-5  ">
         <GoMultiSelect className="filterIcon" onClick={() => settingfilter(prestate => !prestate)}/>
@@ -70,7 +80,7 @@ function HomePage() {
              }
 
   </div>
-
+</>
   )
 }
     const dataloading = async () => {
